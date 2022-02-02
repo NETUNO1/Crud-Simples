@@ -1,0 +1,87 @@
+﻿<Window x:Class="CrudApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CrudApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550"  Width="900">
+    <Border Margin="10">
+        <StackPanel>
+            <StackPanel Height="150">
+                <!--campos de preenchumento dos dados que vao ser salvos no banco-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0" Margin="0 0 10 0">
+                        <TextBlock Text="Id" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBox x:Name="IdText" Padding="3" />
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" Margin="0 0 10 0">
+                        <TextBlock Text="Nome" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBox x:Name="NomeText" Padding="3" />
+                    </StackPanel>
+                    <StackPanel Grid.Column="2" Margin="0 0 10 0">
+                        <TextBlock Text="Area" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBox x:Name="AreaText" Padding="3" />
+                    </StackPanel>
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0" Margin="0 0 10 0">
+                        <TextBlock Text="Idade" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBox x:Name="IdadeText" Padding="3" />
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" Margin="0 0 10 0">
+                        <TextBlock Text="Sexo" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBox x:Name="SexoText" Padding="3" />
+                    </StackPanel>
+                    <StackPanel Grid.Column="2" Margin="0 0 10 0">
+                        <TextBlock Text="Salario" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBox x:Name="SalarioText" Padding="3" />
+                    </StackPanel>
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0" Margin="0 0 10 0">
+                        <TextBlock Text="Entrda" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBox x:Name="EntradaText" Padding="3" />
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" Margin="0 0 0 0">
+                        <Button Margin="0 20 10 0" x:Name="ButtonAplicar" Click="ButtonAplicar_Click" Content="Salvar"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="2" Margin="0 0 0 0">
+                        <Button Margin="0 20 0 0" x:Name="ButtonAtualzar" Click="ButtonAtualzar_Click" Content="Salvar"/>
+                    </StackPanel>
+
+                </Grid>
+                <!--fecha-->
+                
+            </StackPanel>
+            <DataGrid x:Name="datagrid" IsReadOnly="True" AutoGenerateColumns="False" ColumnWidth="*">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Width="*" Binding="{Binding Id}"/>
+                    <DataGridTextColumn Header="Nome" Width="*" Binding="{Binding nome}"/>
+                    <DataGridTextColumn Header="Area" Width="*" Binding="{Binding Area}"/>
+                    <DataGridTextColumn Header="Idade" Width="*" Binding="{Binding Idade}"/>
+                    <DataGridTextColumn Header="Sexo" Width="*" Binding="{Binding sexo}"/>
+                    <DataGridTextColumn Header="Salario" Width="*" Binding="{Binding Salario}"/>
+                    <DataGridTextColumn Header="Entrada" Width="*" Binding="{Binding Entrada}"/>
+                    
+                </DataGrid.Columns>
+               
+            </DataGrid>
+        </StackPanel>
+    </Border>
+</Window>
